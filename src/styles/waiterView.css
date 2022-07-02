@@ -192,7 +192,7 @@
   border-radius: 5px 12px 0 0;
 }
 .card-body-status-pending { 
-  width: 55%;
+  width: 70%;
   padding: 5px;
   color: var(--light-blue);
   background-color: var(--dark-blue2);
@@ -318,7 +318,7 @@
     width: 48%;
   }
   .card-body-status-pending { 
-    width: 90%;
+    width: 95%;
   }
   .waiter-orders-to-serve {
     min-height: 80vh;
