@@ -31,7 +31,7 @@ export const OrderContainer = ({ activeSession }) => {
   // se declara el estado de la orden
   const [orderSuccess, setOrderSuccess] = useState('');
 
-  // hook para cambio para mensaje de orderSuccess
+  // hook para cambio en mensaje de orderSuccess
   useEffect(() => {
     if (orderSuccess !== '') {
       setTimeout(() => {
@@ -99,14 +99,14 @@ export const OrderContainer = ({ activeSession }) => {
     }
   };
 
-    // hook para cambio de mensaje de inputNameError
-    useEffect(() => {
-      if (inputNameError) {
-        setTimeout(() => {
-          setInputNameError('');
-        }, 2000);
-      }
-    }, [inputNameError]);
+  // hook para cambio de mensaje de inputNameError
+  useEffect(() => {
+    if (inputNameError) {
+      setTimeout(() => {
+        setInputNameError('');
+      }, 1500);
+    }
+  }, [inputNameError]);
 
   return (
     <>
