@@ -85,8 +85,7 @@ export const OrderContainer = ({ activeSession }) => {
 
   };
 
-  // estructura de hook para mostrar error de login,
-  // en la validacion del input nombre del cliente, inicializa vacio ('')
+  // estructura de hook para mostrar error de input en nombre del cliente
   const [inputNameError, setInputNameError] = useState('');
 
   // funcion para validar nombre diferente de vacio
@@ -99,6 +98,15 @@ export const OrderContainer = ({ activeSession }) => {
       setInputNameError('Nombre del cliente es requerido');
     }
   };
+
+    // hook para cambio de mensaje de inputNameError
+    useEffect(() => {
+      if (inputNameError) {
+        setTimeout(() => {
+          setInputNameError('');
+        }, 2000);
+      }
+    }, [inputNameError]);
 
   return (
     <>
