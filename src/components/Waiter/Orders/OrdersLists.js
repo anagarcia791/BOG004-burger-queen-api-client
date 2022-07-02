@@ -13,7 +13,7 @@ export const OrderLists = ({ orders }) => {
                 <div className='card-body'>
                   <li data-testid='card-body-name'>Cliente: {order.client}</li>
                   <li>Hr pedido: {order.dateEntry}</li>
-                  <li className='card-body-status-pending'>Estatus: {order.status}</li>
+                  <li className='card-body-status-pending'>Estatus: pendiente</li>
                 </div>
               </ul>
             ))}
