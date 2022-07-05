@@ -66,20 +66,21 @@
   color: var(--textwhite);
   background-color: var(--dark-blue2);;
 }
-.btn-register {
+.register-btn {
   width: 60%;
   margin: 5px 0 10px 0;
   padding: 6px;
   font-size: 1rem;
   font-weight: bold;
   align-self: center;
+  border: 1px outset var(--textwhite);
   border-radius: 20px;
-  color: var(--bg2);
-  background-color: var(--salmon);
-}
-.btn-register:hover {
   color: var(--textwhite);
   background-color: var(--light-yellow);
+}
+.register-btn:hover {
+  color: var(--bg2);
+  background-color: var(--light-yellow2);
 }
 .employee-register-success {
   margin: auto;
