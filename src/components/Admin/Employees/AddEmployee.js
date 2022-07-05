@@ -122,7 +122,7 @@ export const AddEmployee = ({ token }) => {
           </option>
         ))}
       </select>
-      <button className='btn-register' onClick={() => createUser()}>
+      <button className='register-btn' onClick={() => createUser()}>
         Crear usuario
       </button>
       {userSuccess && (

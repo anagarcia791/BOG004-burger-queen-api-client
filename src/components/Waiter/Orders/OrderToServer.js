@@ -27,7 +27,6 @@ export const OrderToServer = ({ orders, token }) => {
                 <td>{order.dateEntry}</td>
                 <td>
                   <button
-                    className='btn btn-warning'
                     onClick={() =>
                       statusDeliveredPetition(
                         order.id,

@@ -55,52 +55,54 @@ export const EmployeeCard = ({ users, token }) => {
     deleteUserPetition(uId, token)
   }}
 
-  return users.map((user) => (
-    <section key={user.id.toString()} className='employee-card'>
-      <p data-testid='employee-id'>
-        id: {user.id}.
-      </p>
-      <label>
-        Correo: 
-      </label>
-      <input
-        type='text'
-        autoComplete='off'
-        defaultValue={user.email}
-        readOnly={editingId !== user.id}
-        onChange={(e) => employeeEmailChange(e)}
-        data-testid={user.id.toString() + '-emailSaved'}
-      ></input>
-      <label>
-        Rol: {Object.keys(user.roles)[0]}
-      </label>
-      <div>
-        <button
-          data-testid={user.id.toString() + '-delete'}
-          onClick={() => deleteEmployee(user.id)}
-        >
-          <i className='fa-regular fa-trash-can'></i>
-        </button>
-        <button
-          data-testid={user.id.toString() + '-edit'}
-          onClick={() => editemployeeEmail(user.id)}
-        >
-          <i className='fa-solid fa-pencil'></i>
-        </button>
-        {showBtn && editingId === user.id 
-          ? (
-              <button
-                data-testid={user.id.toString() + '-save'}
-                onClick={() => updateEmail(user.id, user.roles)}
-              >
-                <i className='fa-solid fa-floppy-disk'></i>
-              </button>
-            ) 
-          : (
-              ''
-            )
-        }
-      </div>
-    </section>
-  ));
+  return (
+    users.map((user) => (
+      <section key={user.id.toString()} className='employee-card'>
+        <p data-testid='employee-id'>
+          id: {user.id}.
+        </p>
+        <label>
+          Correo: 
+        </label>
+        <input
+          type='text'
+          autoComplete='off'
+          defaultValue={user.email}
+          readOnly={editingId !== user.id}
+          onChange={(e) => employeeEmailChange(e)}
+          data-testid={user.id.toString() + '-emailSaved'}
+        ></input>
+        <label>
+          Rol: {Object.keys(user.roles)[0]}
+        </label>
+        <div>
+          <button
+            data-testid={user.id.toString() + '-delete'}
+            onClick={() => deleteEmployee(user.id)}
+          >
+            <i className='fa-regular fa-trash-can'></i>
+          </button>
+          <button
+            data-testid={user.id.toString() + '-edit'}
+            onClick={() => editemployeeEmail(user.id)}
+          >
+            <i className='fa-solid fa-pencil'></i>
+          </button>
+          {showBtn && editingId === user.id 
+            ? (
+                <button
+                  data-testid={user.id.toString() + '-save'}
+                  onClick={() => updateEmail(user.id, user.roles)}
+                >
+                  <i className='fa-solid fa-floppy-disk'></i>
+                </button>
+              ) 
+            : (
+                ''
+              )
+          }
+        </div>
+      </section>
+    ))
+  )
 };

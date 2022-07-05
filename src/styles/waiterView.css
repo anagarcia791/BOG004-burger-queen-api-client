@@ -221,13 +221,17 @@
   color: var(--textwhite);
   vertical-align: middle;
 }
-.waiter-orders-to-serve .btn {
+.waiter-orders-to-serve button{
   padding: 5px;
   font-size: 1em;
-  border-radius: 10px;
-  border: none;
-  color: var(--light-yellow2);
+  border-radius: 8px;
+  border: 1px outset var(--textwhite);
+  color: var(--textwhite);
   background-color: var(--light-yellow);
+}
+.waiter-orders-to-serve button:hover{
+  color: var(--bg2);
+  background-color: var(--light-yellow2);
 }
 /*FIN seccion pedidos Delivering*/
 

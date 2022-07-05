@@ -43,7 +43,9 @@
 .kitchen-orders button{
   width: 50%;
   margin-left: 50%;
-  border: none;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px outset var(--textwhite);
   color: var(--textwhite);
   background-color: var(--cooking-ready);
 }
